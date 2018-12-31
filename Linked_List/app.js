@@ -25,11 +25,11 @@ async function main() {
 
     //Getting Middel Element in a Link List
     let middelElement = middle(generatedLinkList);
-    console.log(`Middel Element of List is ${middelElement.node}`);
+    console.log(`\nMiddel Element of List is ${middelElement.node}`);
 
     //Reversing an Entire Link List
     let reversedList = reverse(generatedLinkList);
-    let string = `Reversed Link Lis is`;
+    let string = `\nReversed Link List is`;
     let allRevElement = getElement(reversedList);
     console.log(`${string}${allRevElement}`);
 
@@ -38,7 +38,7 @@ async function main() {
     // let k = readlineSync.question(chalk.green("Please Enter the Number is which the list is to be Reversed:")).trim(); 
     // console.log("k"+k);
     generatedLinkList = linkedList.generateLinkList(numbArr);
-    let reversedGroup = reverseGroup(generatedLinkList,k);
+    // let reversedGroup = reverseGroup(generatedLinkList,k);
 
 
 
