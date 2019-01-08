@@ -10,8 +10,8 @@ const missingFunc = require("./missingElement");
 const largest_smallest = require("./Kth_Largest&kth_Smallest");
 const pairSum = require("./pairSumInArray");
 const lis = require("./longestIncSubseq");
-
-
+const lnf = require("./largestNumberForm");
+const equalArray = require("./equalArray");
 function main() {
 
     //Parenthesis Checker
@@ -106,6 +106,27 @@ function main() {
     let longIncSub = lis(arr);
     console.log("\nLONGEST INCREASING SUBSEQUENCE:");
     console.log(`The Longest Increasing Subsequence in array ${arr} is ${longIncSub}.`);
+
+    //Largest Number formed from an Array
+    // arr = [3, 30, 34, 5, 9];
+    arr = [54, 546, 548, 60];
+    let largNumber = lnf(arr);
+    console.log("\nLargest Number Formed from Given Array:");
+    console.log(`Largest number formed from given Array ${arr} is ${largNumber}.`);
+
+    //Two Arrays are equal or not
+    // arr = [1, 2, 5, 4, 0, 2, 1];
+    // arr1 = [2, 4, 5, 0, 1, 1, 2];
+    arr = [1, 7, 1];
+    arr1 = [7, 7, 1];
+    let equal = equalArray(arr,arr1);
+    console.log("\nCOMPARING TWO ARRAYS:")
+    if(equal){
+        console.log(`The given two Arrays "${arr}" and "${arr1}" are Equal.`);
+    }
+    else{
+        console.log(`The given two Arrays "${arr}" and "${arr1}" are not Equal.`);
+    }
 }
 
 main();
